@@ -46,3 +46,26 @@ pDiv.textContent = "ME TOO!";
 div.appendChild(h1);
 div.appendChild(pDiv);
 container.appendChild(div);
+
+// Exploring different button methods
+
+// Method 2
+// const btn = document.querySelector('#btn');
+// btn.onclick = () => alert("Hello World");
+
+// Method 3
+// const btn = document.querySelector('#btn');
+// btn.addEventListener('click', () => {
+//     alert("Hello World");
+// })
+
+// btn.addEventListener('click', function (e){
+//     e.target.style.background = 'pink';
+// })
+
+const buttons = document.querySelectorAll('button');
+buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+        alert(button.id);
+    });
+});
